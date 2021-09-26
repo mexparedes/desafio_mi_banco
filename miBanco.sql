@@ -8,11 +8,11 @@ CREATE TABLE cuentas (
     );   
 
 CREATE TABLE transacciones (
-    id_transaccion SERIAL,
+    id_transaccion SERIAL PRIMARY KEY,
     descripcion VARCHAR(50), 
     fecha VARCHAR(10), 
     monto DECIMAL, 
-    cuenta INT PRIMARY KEY,
+    cuenta INT,
     FOREIGN KEY (cuenta) REFERENCES cuentas (id_cuenta)
     );
 
